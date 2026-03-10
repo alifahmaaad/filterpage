@@ -63,6 +63,7 @@ export default function FilterPage() {
             <CustomSelect
               label="Kota/Kabupaten"
               name="regencyId"
+              key={`regency-${selections.province?.id || "empty"}`}
               placeholder="Pilih Kota/Kabupaten"
               icon={<Building2 className="w-5 h-5" />}
               options={options.regencies || []}
@@ -73,6 +74,7 @@ export default function FilterPage() {
             <CustomSelect
               label="Kecamatan"
               name="districtId"
+              key={`district-${selections.regency?.id || "empty"}`}
               placeholder="Pilih Kecamatan"
               icon={<MapPin className="w-5 h-5" />}
               options={options.districts}
